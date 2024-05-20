@@ -1,0 +1,36 @@
+daemonize
+show-failed-attempts
+clock
+screenshot
+effect-blur=6x6
+effect-vignette=0.65:1
+color=32302f
+font=Sarasa Term TC
+indicator
+indicator-radius=120
+indicator-thickness=16
+line-color=430fec
+ring-color=32302f
+inside-color=430fec
+key-hl-color=430fec
+separator-color=00000000
+text-color=fbf1c7
+text-caps-lock-color=""
+line-ver-color=430fec
+ring-ver-color=430fec
+inside-ver-color=430fec
+text-ver-color=fbf1c7
+text-wrong-color=32302f
+ring-wrong-color=fb4934
+inside-wrong-color=fb4934
+line-wrong-color=fb4934
+text-clear-color=fbf1c7
+inside-clear-color=430fec
+ring-clear-color=430fec
+line-clear-color=430fec
+grace=0.5
+grace-no-mouse
+grace-no-touch
+datestr=%a, %B %e
+timestr=%I:%M %p
+fade-in=0.15

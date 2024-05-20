@@ -3,7 +3,7 @@
 
 declare -i SUSPEND
 declare BG_PATH
-BG_CACHED_PATH="${HOME}/Pictures/lock.png"
+BG_CACHED_PATH="${HOME}/Pictures/lock.jpg"
 
 help() {
 	echo "i3lock-color script by github/mehedirm6244"

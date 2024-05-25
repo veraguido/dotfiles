@@ -1,10 +1,10 @@
 * {
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 tooltip {
-    font-family: Iosevka Nerd Font Propo, monospace;
+    font-family: "Noto Sans Medium", Iosevka Nerd Font Propo, monospace;
     background-color: rgba(40, 40, 40, 0.8);
     color: #ebdbb2;
     border-radius: 5px;
@@ -13,7 +13,7 @@ tooltip {
 
 window#waybar {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Roboto Mono Medium", Iosevka Nerd Font Propo, monospace;
+    font-family: "Noto Sans Medium", "Roboto Mono Medium", Iosevka Nerd Font Propo, monospace;
     background-color: transparent;
     color: #ebdbb2;
     transition-property: background-color;
@@ -36,20 +36,20 @@ window#waybar.empty {
 }
 window#waybar.solo {
     background-color: #FFFFFF;
-}
-*/
+}*/
+
 
 .modules-right {
-    margin: 5px 10px 0 0;
-    padding-bottom: 5px;
+    margin: 2px 4px 0 0;
+    padding-bottom: 2px;
 }
 .modules-center {
-    margin: 5px 10px 0 0;
-    padding-bottom: 5px;
+    margin: 2px 4px 0 0;
+    padding-bottom: 2px;
 }
 .modules-left {
-    margin: 5px 0 0 10px;
-    padding-bottom: 5px;
+    margin: 2px 0 0 4px;
+    padding-bottom: 2px;
 }
 
 button {
@@ -70,18 +70,18 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0;
     background-color: transparent;
     color: #ebdbb2;
     border-radius: 0;
 }
 
 #workspaces button:first-child {
-    border-radius: 5px 0 0 5px;
+    /*border-radius: 5px 0 0 5px;*/
 }
 
 #workspaces button:last-child {
-    border-radius: 0 5px 5px 0;
+    /*border-radius: 0 5px 5px 0;*/
 }
 
 #workspaces button:hover {
@@ -178,7 +178,7 @@ label:focus {
 }
 
 #mpris.playing {
-    background-color: #430fec;
+    background-color: #7a80ec;
     color: #ebdbb2;
 }
 

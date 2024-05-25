@@ -46,12 +46,12 @@
     "custom/files": {
         "format": "  ",
         "tooltip": false,
-        "on-click": "nautilus"
+        "on-click": "thunar"
     },
     "custom/text": {
         "format": "  ",
         "tooltip": false,
-        "on-click": "gnome-text-editor"
+        "on-click": "mousepad"
     },
     "custom/notifications": {
       "format": "  ",
@@ -111,7 +111,7 @@
         "spacing": 10
     },
     "load": {
-        "format": " {}",
+        "format": "   {}",
         "on-click": "gnome-system-monitor"
     },
     "clock": {
@@ -148,9 +148,9 @@
     },
     "wireplumber": {
         "scroll-step": 5, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}% ",
-        "format-bluetooth-muted": " {icon}",
+        "format": "{icon}    {volume}%",
+        "format-bluetooth": "{icon}    {volume}% ",
+        "format-bluetooth-muted": "    {icon}",
         "format-muted": "",
         "format-icons": {
             "headphone": "",

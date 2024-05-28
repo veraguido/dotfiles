@@ -1,6 +1,6 @@
 * {
     font-size: 12px;
-    border-radius: 3px;
+    border-radius: 16px;
 }
 
 tooltip {
@@ -15,10 +15,13 @@ window#waybar {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "Noto Sans Medium", "Roboto Mono Medium", Iosevka Nerd Font Propo, monospace;
     background-color: transparent;
+    /*background-color: #282828;*/
     color: #ebdbb2;
     transition-property: background-color;
     transition-duration: .5s;
-    border: 1px solid rgba(117, 107, 255, 0.39);
+    border-bottom: 1px solid rgba(40, 40, 40, 0.2);;
+/*    border: 1px solid rgba(117, 107, 255, 0.39);*/
+    /*border: 1px solid rgba(16, 16, 16, 0.39);*/
 }
 
 window#waybar.hidden {
@@ -73,7 +76,7 @@ button:hover {
     padding: 0;
     background-color: transparent;
     color: #ebdbb2;
-    border-radius: 0;
+    /*border-radius: 0;*/
 }
 
 #workspaces button:first-child {
@@ -110,8 +113,10 @@ button:hover {
 #tray,
 #mpris,
 #custom-notifications,
+#custom-wallpaper,
 #custom-files,
 #custom-text,
+#custom-power,
 #load {
     padding: 0 10px;
     background-color: #282828;
@@ -178,7 +183,7 @@ label:focus {
 }
 
 #mpris.playing {
-    background-color: #7a80ec;
+    background-color: #7259ff;
     color: #ebdbb2;
 }
 

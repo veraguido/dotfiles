@@ -186,7 +186,7 @@
 	border-color = #F92672
 
 	# Radius of window corners in pixels.
-	corner-radius = 0
+	corner-radius = 14
 
 	# Padding between borders and text. Can be pixels or a percentage.
 	padding-top = 8
@@ -305,20 +305,21 @@
 
 
 
-anchor = bottom
-width = 100%
-height = 32
-horizontal = true
+#anchor = bottom
+width = 35%
+#height = 28
+#horizontal = true
 text-color = #7a80ec
 font-size = 10
 prompt-text = " Run: "
 font = JetBrains Mono Nerd Font
 outline-width = 0
-border-width = 0
-background-color = #000000
+border-width = 1
+border-color = #282828
+background-color = #000000EE
 min-input-width = 120
 result-spacing = 15
-padding-top = 3
-padding-bottom = 3
-padding-left = 0
-padding-right = 0
+padding-top = 12
+padding-bottom = 0
+padding-left = 20
+padding-right = 20

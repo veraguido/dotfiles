@@ -23,13 +23,15 @@
     "modules-right": [
         "custom/notifications",
         "idle_inhibitor",
+        "custom/wallpaper",
         "load",
 	    "wireplumber",
         "backlight",
         "custom/weather",
         "clock",
         "battery",
-        "tray"
+        "tray",
+        "custom/power"
     ],
     // Modules configuration
     "sway/workspaces": {
@@ -107,8 +109,14 @@
         "tooltip-format": "{app}: {title}"
     },
     "tray": {
+        "show-passive-items": true,
         "icon-size": 14,
         "spacing": 10
+    },
+    "custom/wallpaper": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "~/scripts/randwall.sh"
     },
     "load": {
         "format": "   {}",
@@ -130,6 +138,11 @@
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "custom/power": {
+        "format":" ⏻ ",
+        "on-click": "shutdown now",
+        "tooltip": false
     },
     "battery": {
         "states": {

@@ -1,6 +1,4 @@
  2102  yay -S sway swaybg foot polkit
- 2107  yay -S arandr 
- 2115  yay -S wofi
  2117  yay -S waybar
  2119  yay -S ttf-font-awesome
  2121  yay -S ttf-roboto-mono
@@ -8,7 +6,7 @@
  2143  yay -S swayrandr 
  2144  yay -S wdisplays
  2145  yay -S swaync
- 2152  yay -S swayidle swaylock
+ 2152  yay -S swayidle
  2159  yay -S swayfx
  2161  yay -Syu
  2211  yay -S blueman
@@ -18,21 +16,12 @@
  2229  yay -S avizo
  2230  yay -S mpd
  2236  yay -S network-manager-applet
- 2239  yay -Ss ivosek
- 2240  yay -Ss iosevk
  2241  yay -S ttf-iosevka
- 2243  yay -Ss libicuuc
- 2245  yay -S megasync-git
- 2250  yay -S satty-bin
- 2257  yay -S swappy
+ 2257  yay -S flameshot
  2304  yay -S mousepad
- 2308  yay -Syu
  2309  yay -S swaylock-effects
- 2318  history | grep yay -S
- 2319  history | grep "yay -S"
  2338  yay -S mousepad
  2353  yay -S tofi
- 2360  yay -S swayconfig
  2361  yay -S swaysettings
  2370  yay -S xdg-desktop-portal-wlr
  2429  yay -S swww

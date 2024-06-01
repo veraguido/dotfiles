@@ -1,4 +1,4 @@
- 2102  yay -S sway swaybg foot polkit
+ 2102  yay -S swayfx swaybg foot polkit
  2117  yay -S waybar
  2119  yay -S ttf-font-awesome
  2121  yay -S ttf-roboto-mono
@@ -7,7 +7,6 @@
  2144  yay -S wdisplays
  2145  yay -S swaync
  2152  yay -S swayidle
- 2159  yay -S swayfx
  2211  yay -S blueman
  2214  yay -S blueman
  2225  yay -S thunar thunar-archive-plugin

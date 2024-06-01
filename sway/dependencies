@@ -8,7 +8,6 @@
  2145  yay -S swaync
  2152  yay -S swayidle
  2159  yay -S swayfx
- 2161  yay -Syu
  2211  yay -S blueman
  2214  yay -S blueman
  2225  yay -S thunar thunar-archive-plugin

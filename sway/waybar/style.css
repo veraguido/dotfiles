@@ -4,7 +4,7 @@
 }
 
 tooltip {
-    font-family: "Noto Sans Medium", Iosevka Nerd Font Propo, monospace;
+    font-family: "Inter Medium", Iosevka Nerd Font Propo, monospace;
     background-color: rgba(40, 40, 40, 0.8);
     color: #ebdbb2;
     border-radius: 5px;
@@ -13,7 +13,7 @@ tooltip {
 
 window#waybar {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Noto Sans Medium", "Roboto Mono Medium", Iosevka Nerd Font Propo, monospace;
+    font-family: "Inter Medium", "Roboto Mono Medium", Iosevka Nerd Font Propo, monospace;
     background-color: transparent;
     /*background-color: #282828;*/
     color: #ebdbb2;

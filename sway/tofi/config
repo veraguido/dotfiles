@@ -80,14 +80,14 @@
 	placeholder-background-corner-radius = 0
 
 	# Input text theme
-	# input-color = #FFFFFF
+	input-color = #FFFFFF
 	input-background = #00000000
 	input-background-padding = 0
 	input-background-corner-radius = 0
 
 	# Default result text theme
 	# default-result-color = #FFFFFF
-	default-result-background = #00000000
+	default-result-background = #000000
 	default-result-background-padding = 0
 	default-result-background-corner-radius = 0
 
@@ -305,21 +305,21 @@
 
 
 
-#anchor = bottom
-width = 35%
-#height = 28
-#horizontal = true
+anchor = center
+width = 50%
+height = 38
+horizontal = true
 text-color = #7a80ec
 font-size = 10
 prompt-text = " Run: "
 font = JetBrains Mono Nerd Font
-outline-width = 0
+outline-width = 1
 border-width = 1
 border-color = #282828
 background-color = #000000EE
 min-input-width = 120
 result-spacing = 15
-padding-top = 12
+padding-top = 0
 padding-bottom = 0
-padding-left = 20
-padding-right = 20
+padding-left = 5
+padding-right = 5

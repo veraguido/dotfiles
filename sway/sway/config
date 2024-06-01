@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-font pango: Noto Sans Medium 9
+font pango: Inter Display Medium 10
 
 # ██▄ █   █ █ █▀▄
 # █▄█ █▄▄ ▀▄█ █▀▄
@@ -21,13 +21,12 @@ shadows enable
 shadows_on_csd enable
 shadow_blur_radius 20
 layer_effects "waybar" blur enable; shadows enable;
-layer_effects "swaync" blur enable; shadows enable;
 layer_effects "avizo" blur enable; shadows enable;
 layer_effects "tofi" blur enable; shadows enable;
 layer_effects "gtk-layer-shell" blur enable; shadows enable; corner_radius 14
 layer_effects "avizo" blur enable; corner_radius 14
-layer_effects "swaync-control-center" blur enable; shadows enable; 
-layer_effects "swaync-notification-window" blur enable; shadows disable; corner_radius 14
+layer_effects "swaync-control-center" blur disable; shadows enable; 
+layer_effects "swaync-notification-window" blur disable; shadows disable; corner_radius 14
 layer_effects "notifications" blur enable; shadows enable;
 corner_radius 14
 gaps inner 8px
@@ -35,25 +34,25 @@ gaps outer 4px
 
 
 # class                     border  backgr. text    indicator child_border
-#client.focused              #7a80ec #7a80ec #282828 #7a80ec   #7a80ec
-#client.focused_inactive     #282828 #282828 #cecece #282828   #282828
-#client.unfocused            #7a80ec #282828 #cecece #282828   #282828
-#client.urgent               #C6BAF3 #C6BAF3 #cecece #9077e7   #C6BAF3
-#client.placeholder          #C6BAF3 #C6BAF3 #cecece #9077e7   #C6BAF3
+client.focused              #7a80ec #7a80ec #282828 #7a80ec   #7a80ec
+client.focused_inactive     #282828 #282828 #cecece #282828   #282828
+client.unfocused            #7a80ec #282828 #cecece #282828   #282828
+client.urgent               #C6BAF3 #C6BAF3 #cecece #9077e7   #C6BAF3
+client.placeholder          #C6BAF3 #C6BAF3 #cecece #9077e7   #C6BAF3
 
-# Set colors
-set $bg #282828
-set $fg #eff1f5
-set $br #7259ff
-set $ia #232425
-
-# class                 border  backgr. text    indicator child_border
-client.focused          $br     $br     $fg     $bg       $br
-client.focused_inactive $bg     $bg     $fg     $bg       $bg
-client.unfocused        $bg     $bg     $fg     $bg       $bg
-#client.urgent          $br     $br     $fg     $bg       $br #currently not implemented
-#client.placeholder     $br     $br     $fg     $bg       $br #currently not implemented
-client.background $bg
+## Set colors
+#set $bg #282828
+#set $fg #eff1f5
+#set $br #7259ff
+#set $ia #232425
+#
+## class                 border  backgr. text    indicator child_border
+#client.focused          $br     $br     $fg     $bg       $br
+#client.focused_inactive $bg     $bg     $fg     $bg       $bg
+#client.unfocused        $bg     $bg     $fg     $bg       $bg
+##client.urgent          $br     $br     $fg     $bg       $br #currently not implemented
+##client.placeholder     $br     $br     $fg     $bg       $br #currently not implemented
+#client.background $bg
 
 set $XDG_CURRENT_DESKTOP sway
 
@@ -69,7 +68,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -337,4 +336,4 @@ exec "megasync"
 
 set $XDG_CURRENT_DESKTOP sway
 
-bindsym $mod+n swaync-client -t -sw
+bindsym $mod+n exec swaync-client -t -sw

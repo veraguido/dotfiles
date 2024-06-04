@@ -22,13 +22,14 @@ shadows_on_csd enable
 shadow_blur_radius 20
 layer_effects "waybar" blur enable; shadows enable;
 layer_effects "avizo" blur enable; shadows enable;
-layer_effects "tofi" blur enable; shadows enable;
-layer_effects "gtk-layer-shell" blur enable; shadows enable; corner_radius 14
-layer_effects "avizo" blur enable; corner_radius 14
+layer_effects "wofi" blur enable; shadows enable; corner_radius 10
+layer_effects "rofi" blur enable; shadows enable; corner_radius 10
+layer_effects "gtk-layer-shell" blur enable; shadows enable; corner_radius 10
+layer_effects "avizo" blur enable; corner_radius 10
 layer_effects "swaync-control-center" blur disable; shadows enable; 
-layer_effects "swaync-notification-window" blur disable; shadows disable; corner_radius 14
+layer_effects "swaync-notification-window" blur disable; shadows disable; corner_radius 10
 layer_effects "notifications" blur enable; shadows enable;
-corner_radius 14
+corner_radius 10
 gaps inner 8px
 gaps outer 4px
 
@@ -72,9 +73,12 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu tofi-run | xargs swaymsg exec --
+#set $menu tofi-run | xargs swaymsg exec --
+set $menu exec ~/.config/rofi/launchers/type-6/launcher.sh
 #Your preferred file explorer
 set $filesmanager thunar
+#wallpaper changer script
+set $wallpaperchange ~/scripts/randwall.sh
 
 
 
@@ -132,6 +136,7 @@ input type:keyboard {
 input "type:touchpad" {
     dwt enabled
     tap enabled
+    scroll_factor 0.3
     middle_emulation enabled
 }
 
@@ -291,6 +296,7 @@ bindsym $mod+r mode "resize"
 
 bindsym $mod+m exec "swaylock -f -c 000000"
 
+bindsym $mod+c exec $wallpaperchange
 
 #volume stuff
 bindsym XF86AudioRaiseVolume exec volumectl -u up
@@ -318,10 +324,11 @@ bar {
 	swaybar_command waybar
 }
 
-for_window [class="MEGAsync"] floating enable
+for_window [class="megasync"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="blueman-manager"] floating enable
 for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
+
 
 # ▄▀▀ ▀█▀ ▄▀▄ █▀▄ ▀█▀ █ █ █▀▄
 # ▄██  █  █▀█ █▀▄  █  ▀▄█ █▀ 
@@ -333,6 +340,8 @@ exec_always "avizo-service"
 exec "nm-applet --indicator"
 exec "blueman-applet"
 exec "megasync"
+exec_always autotiling
+exec_always $wallpaperchange
 
 set $XDG_CURRENT_DESKTOP sway
 

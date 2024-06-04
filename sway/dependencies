@@ -23,3 +23,6 @@
  2361  yay -S swaysettings
  2370  yay -S xdg-desktop-portal-wlr
  2429  yay -S swww
+ 2429  yay -S kooha
+ 2596  yay -S rofi-wayland
+ 2654  yay -S autotiling

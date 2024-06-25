@@ -12,10 +12,10 @@
     
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        "sway/workspaces",
         "wlr/taskbar",
-        "hyprland/window",
-        "hyprland/mode",
+        "sway/window",
+        "sway/mode",
         "sway/scratchpad"
     ],
     "modules-center": [
@@ -25,25 +25,25 @@
     "modules-right": [
         "idle_inhibitor",
         "load",
-        "pulseaudio",
+  	    "wireplumber",
         "pulseaudio/slider",
         "backlight",
         "custom/weather",
         "clock",
         "battery",
         "tray",
-         //"custom/wallpaper",
+//        "custom/wallpaper",
         "custom/notifications"
         //"custom/text"
     ],
     // Modules configuration
-    "hyprland/workspaces": {
+    "sway/workspaces": {
         "all-outputs": false,
         "warp-on-scroll": false,
         "enable-bar-scroll": true,
         "disable-scroll-wraparound": true,
     },
-    "hyprland/window": {
+    "sway/window": {
         "format": "{title}",
         "max-length": 80,
         "all-outputs": true
@@ -109,7 +109,7 @@
             "deactivated": " "
         }
     },
-    "hyprland/mode": {
+    "sway/mode": {
         "format": "{icon} {title}"
     },
     "sway/scratchpad": {
@@ -188,37 +188,6 @@
         },
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-middle": "~/scripts/audioswitcher.py",
-        "on-click-right": "pavucontrol -t 4"
-    },
-    "pulseaudio": {
-        "format": "{icon}  {volume}",
-        "rotate": 0,
-        "format-muted": "婢",
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-middle": "~/scripts/audioswitcher.py",
-        "on-click-right": "pavucontrol -t 4",
-        "on-scroll-up": "pactl -- set-sink-volume 0 +5%",
-        "on-scroll-down": "pactl -- set-sink-volume 0 -5%",
-        "tooltip-format": "{icon} {desc} // {volume}%",
-        "scroll-step": 5,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        }
-    },
-
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "rotate": 0,
-        "format-source": "",
-        "format-source-muted": "",
-        "on-click": "pavucontrol -t 4",
-        "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
-        "scroll-step": 5
+        "on-click-right": "pavucontrol"
     }
 }]

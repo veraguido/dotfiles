@@ -2,9 +2,10 @@
 [{
     //"output": ["DP-2", "DP-3"],
     // "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     //"height": 22, // Waybar height (to be removed for auto height)
-    "margin-bottom": 2,
+    "margin-top": 2,
+    "margin-bottom": 0,
     "margin-right": 6,
     "margin-left": 6,
     // "width": 1280, // Waybar width
@@ -20,20 +21,23 @@
     ],
     "modules-center": [
         //"cava",
-        "mpris"
+        "clock#date",
+        "idle_inhibitor",
+        "custom/notifications"
     ],
     "modules-right": [
-        "idle_inhibitor",
-        "load",
+        //"load",
+        "mpris",
         "pulseaudio",
         "pulseaudio/slider",
+        "pulseaudio#microphone",
         "backlight",
         "custom/weather",
-        "clock",
         "battery",
-        "tray",
+        "custom/pacman",
+        "tray"
          //"custom/wallpaper",
-        "custom/notifications"
+        
         //"custom/text"
     ],
     // Modules configuration
@@ -129,14 +133,28 @@
         "tooltip": false,
         "on-click": "~/scripts/randwall.sh"
     },
+    "custom/pacman": {
+        "format": "<span foreground='#E0AF68'></span> {}",
+        "interval": 3600,                     // every hour
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "kitty -e 'yay'; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8,
+        "max-length": 8,
+        "min-length": 3
+    },
     "load": {
-        "format": "   {}",
+        "format": "  {}",
         "on-click": "gnome-system-monitor"
     },
-    "clock": {
-        // "timezone": "America/New_York",
+    "clock#date": {
+        "format": "<span foreground='#9ECE6A'></span> {:%H:%M  <span foreground='#9ECE6A'></span> %e %b}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "today-format": "<b>{}</b>",
+        "on-click": "gnome-calendar"
+        // "timezone": "America/New_York",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        //"format-alt": "{:%Y-%m-%d}"
     },
     "custom/weather": {
         "format": "{}°",
@@ -191,7 +209,8 @@
         "on-click-right": "pavucontrol -t 4"
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}",
+        //"format": "{icon} {volume}",
+        "format": "{icon}",
         "rotate": 0,
         "format-muted": "婢",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",

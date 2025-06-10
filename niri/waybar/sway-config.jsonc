@@ -1,0 +1,193 @@
+// -*- mode: jsonc -*-
+[{
+    //"output": ["DP-2", "DP-3"],
+    // "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    //"height": 22, // Waybar height (to be removed for auto height)
+    "margin-bottom": 2,
+    "margin-right": 6,
+    "margin-left": 6,
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    
+    // Choose the order of the modules
+    "modules-left": [
+        "sway/workspaces",
+        "wlr/taskbar",
+        "sway/window",
+        "sway/mode",
+        "sway/scratchpad"
+    ],
+    "modules-center": [
+        //"cava",
+        "mpris"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "load",
+  	    "wireplumber",
+        "pulseaudio/slider",
+        "backlight",
+        "custom/weather",
+        "clock",
+        "battery",
+        "tray",
+//        "custom/wallpaper",
+        "custom/notifications"
+        //"custom/text"
+    ],
+    // Modules configuration
+    "sway/workspaces": {
+        "all-outputs": false,
+        "warp-on-scroll": false,
+        "enable-bar-scroll": true,
+        "disable-scroll-wraparound": true,
+    },
+    "sway/window": {
+        "format": "{title}",
+        "max-length": 80,
+        "all-outputs": true
+    },
+    "custom/files": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "thunar"
+    },
+    "custom/text": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "mousepad"
+    },
+    "custom/notifications": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": "swaync-client -t -sw"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-theme": "Fluent-dark",
+        "icon-size": 16,
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "on-right-click": "minimize"
+    },
+    "cava": {
+	    //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+	    "framerate": 30,
+	    "autosens": 1,
+    	"bars": 14,
+    	"lower_cutoff_freq": 50,
+    	"higher_cutoff_freq": 10000,
+    	"method": "pipewire",
+    	"source": "auto",
+    	"stereo": true,
+    	"bar_delimiter": 0,
+    	"noise_reduction": 0.77,
+    	"input_delay": 2,
+      "hide_on_silence": true,
+    	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+	  "actions": {
+	      "on-click-right": "mode"
+	    }
+    },
+    "mpris": {
+   	  "format": " {status_icon} {dynamic}",
+      "interval": 1,
+      "dynamic-len": 60,
+	    "status-icons": {
+		    "playing": "  ▶ ",
+  		  "paused": " ⏸",
+	  	  "stopped": "  "
+	    },
+  	  "dynamic-order": ["title", "artist"],
+	    "ignored-players": ["firefox"]
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    "sway/mode": {
+        "format": "{icon} {title}"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "tray": {
+        "show-passive-items": true,
+        "icon-size": 16,
+        "spacing": 14
+    },
+    "custom/wallpaper": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "~/scripts/randwall.sh"
+    },
+    "load": {
+        "format": "   {}",
+        "on-click": "gnome-system-monitor"
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar -l zh-tw --icon-family nerd",
+        "return-type": "json"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "custom/power": {
+        "format":" ⏻ ",
+        "on-click": "shutdown now",
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "wireplumber": {
+        "scroll-step": 5, // %, can be a float
+        //"format": "{icon}   {volume}%",
+        "format": "{icon} ",
+        "format-bluetooth": "{icon}   {volume}% ",
+        "format-bluetooth-muted": "   {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-middle": "~/scripts/audioswitcher.py",
+        "on-click-right": "pavucontrol"
+    }
+}]

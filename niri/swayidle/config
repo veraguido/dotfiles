@@ -1,0 +1,1 @@
+timeout 300 'swaylock -f -i ~/MEGA/MEGAsync/wallpapers/1357324.jpeg' timeout 500 'systemctl suspend' resume 'niri msg output * on' before-sleep 'swaylock -f -i ~/MEGA/MEGAsync/wallpapers/1357324.jpeg'

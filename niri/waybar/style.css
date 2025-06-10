@@ -1,0 +1,265 @@
+* {
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+tooltip {
+    font-family: "Adwaita Sans", "CodeNewRoman Nerd Font","Inter Medium", Iosevka Nerd Font Propo, monospace;
+    font-weight: 600;
+    background-color: #1e1e1e;
+    color: #ebdbb2;
+    border-radius: 5px;
+    border: 1px solid #545466;
+}
+
+window#waybar {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "Adwaita Sans", "CodeNewRoman Nerd Font", "JetBrainsMono Nerd Font", Iosevka Nerd Font Propo, monospace;
+    font-weight: 600;
+    /*background-color: transparent;*/
+    background-color: #0d0e15;
+
+    color: #ebdbb2;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border: 1px solid rgba(40, 40, 40, 0.1);;
+/*    border: 1px solid rgba(117, 107, 255, 0.39);*/
+    /*border: 1px solid rgba(16, 16, 16, 0.39);*/
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    padding: 0;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}*/
+
+
+.modules-right {
+    margin: 2px 4px 2px 0;
+    padding-top: 0px;
+}
+.modules-center {
+    margin: 2px 4px 2px 0;
+    padding-top: 0px;
+}
+.modules-left {
+    margin: 2px 0 2px 4px;
+    padding-top: 0px;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+    border: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+/*
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ebdbb2;
+} */
+
+#workspaces {
+    background-color: #282828;
+}
+
+#workspaces button {
+    padding: 0;
+    background-color: transparent;
+    color: #ebdbb2;
+    /*border-radius: 0;*/
+}
+
+#workspaces button:first-child {
+    /*border-radius: 5px 0 0 5px;*/
+}
+
+#workspaces button:last-child {
+    /*border-radius: 0 5px 5px 0;*/
+}
+
+#workspaces button:hover {
+    color: #d79921;
+}
+
+#workspaces button.focused {
+    background-color: #665c54;
+     box-shadow: inset 0 -2px #424242; 
+}
+
+#workspaces button.urgent {
+    background-color: #b16286;
+}
+
+#idle_inhibitor,
+#cava,
+#scratchpad,
+#mode,
+#window,
+#clock,
+#battery,
+#backlight,
+#custom-weather,
+#wireplumber,
+#pulseaudio,
+#pulseaudio-slider,
+#tray,
+#mpris,
+#taskbar,
+#custom-notifications,
+#custom-wallpaper,
+#custom-files,
+#custom-text,
+#custom-power,
+#custom-pacman,
+#load {
+    padding: 0 15px;
+    background-color: #201f1f;
+    box-shadow: inset 0 -1px #4d4d4d; 
+    color: #dbdbdb;
+}
+
+#custom-notifications {
+  padding: 0 6px 0 8px;
+}
+
+#pulseaudio-slider {
+  min-width: 100px;
+  padding: 0 10px;
+  color: #ebdbb2;
+}
+
+#pulseaudio-slider trough {
+  min-height: 10px;
+}
+
+#pulseaudio-slider highlight {
+    background-color: #7259ff;
+}
+
+/*
+
+#idle_inhibitor {
+    background-color: #cc118e;
+    box-shadow: inset 0 -2px #e943c5; 
+}
+
+#load {
+    background-color: #9111cc;
+    box-shadow: inset 0 -2px #9e43e9; 
+}
+
+#wireplumber {
+    background-color: #3311cc;
+    box-shadow: inset 0 -2px #6f43e9; 
+}
+
+#clock {
+    color:#000000;
+    background-color: #11a7cc;
+    box-shadow: inset 0 -2px #43d0e9; 
+}
+
+#custom-wallpaper {
+    color:#000000;
+    background-color: #ccc911;
+    box-shadow: inset 0 -2px #e9d843; 
+}
+
+#custom-files {
+    color:#000000;
+    background-color: #36cc11;
+    box-shadow: inset 0 -2px #5fe943; 
+}
+
+
+#mpris {
+    box-shadow: inset 0 -2px #9382db; 
+}*/
+
+
+
+/*#mode {
+    background-color: #689d6a;
+    color: #282828;
+     box-shadow: inset 0 -3px #ffffff;
+} */
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#cava {
+    padding: 0 5px;
+}
+
+#battery.charging, #battery.plugged {
+    background-color: #98971a;
+    color: #282828;
+}
+
+@keyframes blink {
+    to {
+        background-color: #282828;
+        color: #ebdbb2;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #cc241d;
+    color: #ebdbb2;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#wireplumber.muted {
+    background-color: #458588;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#mpris.playing {
+    background-color: #7259ff;
+    color: #ebdbb2;
+}
+
+#tray menu {
+    font-family: sans-serif;
+}
+
+#scratchpad.empty {
+    background: transparent;
+    padding: 0;
+}

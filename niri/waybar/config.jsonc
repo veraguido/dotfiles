@@ -1,0 +1,245 @@
+// -*- mode: jsonc -*-
+[{
+    //"output": ["DP-2", "DP-3"],
+    "output": ["DP-3"],
+    // "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    //"height": 22, // Waybar height (to be removed for auto height)
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+    "margin-left": 0,
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    
+    // Choose the order of the modules
+    "modules-left": [
+        "niri/workspaces",
+        //"wlr/taskbar",
+        "niri/window",
+        "niri/mode",
+        "sway/scratchpad"
+    ],
+    "modules-center": [
+        //"cava",
+        "clock#date",
+        "idle_inhibitor",
+        "custom/notifications"
+    ],
+    "modules-right": [
+        //"load",
+        "mpris",
+        "pulseaudio",
+        "pulseaudio/slider",
+        "pulseaudio#microphone",
+        "backlight",
+        "custom/weather",
+        "battery",
+        "custom/pacman",
+        "tray",
+        "custom/power"
+         //"custom/wallpaper",
+        
+        //"custom/text"
+    ],
+    // Modules configuration
+    "niri/workspaces": {
+        "all-outputs": false,
+        "warp-on-scroll": false,
+        "enable-bar-scroll": true,
+        "disable-scroll-wraparound": true,
+    },
+    "niri/window": {
+        "format": "{title}",
+        "max-length": 80,
+        "all-outputs": true
+    },
+    "custom/files": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "thunar"
+    },
+    "custom/text": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "mousepad"
+    },
+    "custom/notifications": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": "swaync-client -t -sw"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-theme": "Fluent-dark",
+        "icon-size": 16,
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "on-right-click": "minimize"
+    },
+    "cava": {
+	    //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+	    "framerate": 30,
+	    "autosens": 1,
+    	"bars": 14,
+    	"lower_cutoff_freq": 50,
+    	"higher_cutoff_freq": 10000,
+    	"method": "pipewire",
+    	"source": "auto",
+    	"stereo": true,
+    	"bar_delimiter": 0,
+    	"noise_reduction": 0.77,
+    	"input_delay": 2,
+      "hide_on_silence": true,
+    	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+	  "actions": {
+	      "on-click-right": "mode"
+	    }
+    },
+    "mpris": {
+   	  "format": " {status_icon} {dynamic}",
+      "interval": 1,
+      "dynamic-len": 60,
+	    "status-icons": {
+		    "playing": "  ▶ ",
+  		  "paused": " ⏸",
+	  	  "stopped": "  "
+	    },
+  	  "dynamic-order": ["title", "artist"],
+	    "ignored-players": ["firefox"]
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    "sway/mode": {
+        "format": "{icon} {title}"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "tray": {
+        "show-passive-items": true,
+        "icon-size": 16,
+        "spacing": 14
+    },
+    "custom/wallpaper": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "~/scripts/randwall.sh"
+    },
+    "custom/pacman": {
+        "format": "<span foreground='#E0AF68'>  </span> {}",
+        "interval": 3600,                     // every hour
+        "exec": "checkupdates | wc -l",       // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        "on-click": "kitty -e 'yay'; pkill -SIGRTMIN+8 waybar", // update system
+        "signal": 8,
+        "max-length": 8,
+        "min-length": 3
+    },
+    "load": {
+        "format": "  {}",
+        "on-click": "gnome-system-monitor"
+    },
+    "clock#date": {
+        "format": "<span foreground='#9ECE6A'>  </span> {:%H:%M  <span foreground='#9ECE6A'>  </span> %e %b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "today-format": "<b>{}</b>",
+        "on-click": "gnome-calendar"
+        // "timezone": "America/New_York",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        //"format-alt": "{:%Y-%m-%d}"
+    },
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar -l zh-tw --icon-family nerd",
+        "return-type": "json"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "custom/power": {
+        "format":" ⏻ ",
+        "on-click": "/home/guido/.config/rofi/powermenu/type-5/powermenu.sh",
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "wireplumber": {
+        "scroll-step": 5, // %, can be a float
+        //"format": "{icon}   {volume}%",
+        "format": "{icon} ",
+        "format-bluetooth": "{icon}   {volume}% ",
+        "format-bluetooth-muted": "   {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-middle": "~/scripts/audioswitcher.py",
+        "on-click-right": "pavucontrol -t 4"
+    },
+    "pulseaudio": {
+        //"format": "{icon} {volume}",
+        "format": "{icon}",
+        "rotate": 0,
+        "format-muted": "婢",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-middle": "~/scripts/audioswitcher.py",
+        "on-click-right": "pavucontrol -t 4",
+        "on-scroll-up": "pactl -- set-sink-volume 0 +5%",
+        "on-scroll-down": "pactl -- set-sink-volume 0 -5%",
+        "tooltip-format": "{icon} {desc} // {volume}%",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "rotate": 0,
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "pavucontrol -t 4",
+        "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
+        "scroll-step": 5
+    }
+}]

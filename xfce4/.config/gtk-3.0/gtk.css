@@ -1,14 +1,38 @@
 * {font-weight: 500;}
 
+.xfce4-panel widget grid button.flat.toggle {
+	padding-right: 3px;
+	margin-left: 0 3px;
+	color: #C3C2BB;
+}
+.xfce4-panel widget grid button.flat.toggle:hover {
+	background: rgba(0,0,0,0.0);
+	color: #83C092;
+}
+.xfce4-panel widget grid button.flat.toggle:checked {
+	background: rgba(0,0,0,0.0);
+	color: #E67E80;
+}
+.xfce4-panel button {
+	margin: 0 6px;
+	padding: 0 4px;
+}
+
+.tasklist button {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+ }
+
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin {
     padding: 0px;
     background-image: none;
-    background-color: rgba(22, 22, 22, 0.85);
+    background-color: rgba(39, 46, 51, 0.5);
     color: shade(#ffffff, 0.65);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    border: 2px solid #232323;
+    border-radius: 8px;
+    border: 1px solid #41464A;
     /* Set the application icon- and preview-size to 64px */
     -XfwmTabwinWidget-icon-size: 92px;
     -XfwmTabwinWidget-preview-size: 92px; 
@@ -20,85 +44,27 @@
     font-weight: bold;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
     border: none;
-    border-radius: 14px;
+    border-radius: 8px;
     box-shadow: none; 
     font-size: 0;
+
 }
 #xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover {
-    background: rgba(206, 206, 206, 0.3); 
+    background-color: rgba(39, 46, 51, 1);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: 1px solid #313538;
+
 }
 #xfwm-tabwin button:hover {
-    background: #22558b;
-    transition-duration: 50ms; 
+    background-color: rgba(39, 46, 51, 1);
+
+    border-radius: 15px;
+    border: 1px solid #41464A;
+
 }
 #xfwm-tabwin .tabwin-app-grid button {
     min-width: 86px;
     min-height: 86px; 
-}
-
-.window-frame, .window-frame:backdrop {
-  box-shadow: 0 0 0 black;
-  border-style: none;
-  margin: 0;
-  border-radius: 4px;
-}
-
-.xfce4-panel:hover {
-
-    background: rgba(0,0,0,0.0);
-
-}
-
-.xfce4-panel widget grid button.flat.toggle {
-
-    padding-right: 3px;
-
-    margin: 0 3px;
-
-    color: #C3C2BB;
-
-}
-
-.xfce4-panel widget grid button.flat.toggle:hover {
-
-    background: rgba(0,0,0,0.0);
-
-    color: #83C092;
-
-}
-
-.xfce4-panel widget grid button.flat.toggle:checked {
-
-    background: rgba(0,0,0,0.0);
-
-    color: #E67E80;
-
-}
-
-.xfce4-panel.background button:hover,
-
-.xfce4-panel.background button:focus,
-
-.xfce4-panel.background button:active {
-
-    background-color: transparent;
-
-    box-shadow: none;
-
-    color: inherit;
-
-}
-
-button:hover,
-
-button:focus,
-
-button:active {
-
-    background-image: none;
-
-    box-shadow: none;
-
-} 
-
+}/* Xfwm4's alt-tab dialog, aka "tabwin" */
 

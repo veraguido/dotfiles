@@ -4,4 +4,4 @@
 upgrade_count=$(dnf check-update --refresh -q | grep -v "^$" | wc -l)
 
 # Output the number of packages due for upgrade in a simple format
-echo "<txt>$upgrade_count</txt><txtclick>xfce4-terminal -x xfce4-terminal -x sudo dnf update --refresh</txtclick>"
+echo "<txt>$upgrade_count</txt><txtclick>exo-open --launch TerminalEmulator sudo dnf update --refresh</txtclick>"

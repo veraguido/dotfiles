@@ -38,7 +38,7 @@ check_wifi() {
         icon_text="<txt>󰤯</txt>"
         echo "<tool>WiFi is disabled</tool>"
     fi
-    echo "$icon_text <txtclick>nm-connection-editor</txtclick>"
+    echo "$icon_text <txtclick>exo-open --launch TerminalEmulator nmtui</txtclick>"
 }
 
 # Run the check_wifi function

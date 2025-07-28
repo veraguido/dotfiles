@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=xfce4-appfinder
+Icon=database-index
+StartupNotify=true
+Terminal=false
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+Name[en_GB]=
+Name=Run Program...
+Comment[en_GB]=Search through the app finder
+Comment=Enter a command you want to launch
+Keywords[en_GB]=run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;
+Keywords=run;command;application;program;finder;search;launcher;everything;spotlight;sherlock;applesearch;unity dash;krunner;synapse;ulauncher;launchy;gnome do;pie;apwal;recoll;alfred;quicksilver;tracker;beagle;kupfer;
+X-XFCE-Source=file:///usr/share/applications/xfce4-run.desktop
+Path=

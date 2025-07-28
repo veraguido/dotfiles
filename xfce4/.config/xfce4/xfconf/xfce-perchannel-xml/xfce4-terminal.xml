@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xfce4-terminal" version="1.0">
+  <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_TRANSPARENT"/>
+  <property name="font-name" type="string" value="JetBrainsMonoNL Nerd Font 11"/>
+  <property name="misc-borders-default" type="bool" value="true"/>
+  <property name="misc-menubar-default" type="bool" value="false"/>
+  <property name="kinetic-scrolling" type="bool" value="true"/>
+  <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_RIGHT"/>
+  <property name="overlay-scrolling" type="bool" value="true"/>
+  <property name="color-foreground" type="string" value="#FFFAF4"/>
+  <property name="color-background" type="string" value="#0E1019"/>
+  <property name="color-background-vary" type="bool" value="false"/>
+  <property name="color-cursor-foreground" type="string" value=""/>
+  <property name="color-cursor" type="string" value="#FFFAF4"/>
+  <property name="color-cursor-use-default" type="bool" value="false"/>
+  <property name="color-selection" type="string" value=""/>
+  <property name="color-selection-background" type="string" value=""/>
+  <property name="color-selection-use-default" type="bool" value="true"/>
+  <property name="color-bold" type="string" value=""/>
+  <property name="color-bold-use-default" type="bool" value="true"/>
+  <property name="color-palette" type="string" value="#232323;#FF000F;#8CE10B;#FFB900;#008DF8;#6D43A6;#00D8EB;#FFFFFF;#444444;#FF2740;#ABE15B;#FFD242;#0092FF;#9A5FEB;#67FFF0;#FFFFFF"/>
+  <property name="color-bold-is-bright" type="bool" value="true"/>
+  <property name="color-use-theme" type="bool" value="false"/>
+  <property name="tab-activity-color" type="string" value="#aa0000"/>
+  <property name="background-darkness" type="double" value="0.48999999999999999"/>
+  <property name="misc-default-geometry" type="string" value="80x45"/>
+  <property name="title-mode" type="string" value="TERMINAL_TITLE_HIDE"/>
+</channel>

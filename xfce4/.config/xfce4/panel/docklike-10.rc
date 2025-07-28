@@ -1,0 +1,10 @@
+[user]
+pinned=xfce-settings-manager;kitty;org.mozilla.firefox;teams-for-linux;google-chrome;org.xfce.mousepad;code;dbeaver-ce;jetbrains-phpstorm-5eb006f9-5e09-4cf1-b6b2-af0ad3f3460f;jetbrains-idea-ce-0cdf4f0b-e855-421f-b71e-3f40a60e630b;com.spotify.Client;io.github.quodlibet.QuodLibet;org.telegram.desktop;com.discordapp.Discord;org.gnome.Calculator;org.gnome.Calendar;org.gimp.GIMP;be.alexandervanhee.gradia;org.onlyoffice.desktopeditors;org.upscayl.Upscayl;org.gnome.World.Secrets;xfce4-taskmanager;
+showPreviews=false
+showWindowCount=false
+indicatorStyle=1
+indicatorColorFromTheme=false
+inactiveColor=rgb(42,42,42)
+inactiveIndicatorStyle=1
+noWindowsListIfSingle=true
+onlyDisplayVisible=false

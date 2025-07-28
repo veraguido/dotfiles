@@ -1,4 +1,6 @@
-* {font-weight: 500;}
+* {font-weight: 600;}
+
+/*Panel stuff*/
 
 .xfce4-panel widget grid button.flat.toggle {
 	padding-right: 3px;
@@ -24,18 +26,24 @@
     width: 20px;
  }
 
+ pulseaudio-button menu .linked button {
+    margin: 0;
+    padding: 0;
+    width: auto;
+ }
+
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin {
     padding: 0px;
     background-image: none;
-    background-color: rgba(39, 46, 51, 0.5);
+    /*background-color: rgba(39, 46, 51, 0.8);*/
     color: shade(#ffffff, 0.65);
     text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
     border-radius: 8px;
     border: 1px solid #41464A;
     /* Set the application icon- and preview-size to 64px */
-    -XfwmTabwinWidget-icon-size: 92px;
-    -XfwmTabwinWidget-preview-size: 92px; 
+    -XfwmTabwinWidget-icon-size: 64px;
+    -XfwmTabwinWidget-preview-size: 64px; 
     font-size: 0;
 }
 #xfwm-tabwin button {
@@ -50,21 +58,22 @@
 
 }
 #xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover {
-    background-color: rgba(39, 46, 51, 1);
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    border: 1px solid #313538;
+    /*background-color: rgba(39, 46, 51, 1);*/
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.459);
+    border-radius: 8px;
+    border: 1px solid #31353833;
 
 }
 #xfwm-tabwin button:hover {
-    background-color: rgba(39, 46, 51, 1);
-
-    border-radius: 15px;
-    border: 1px solid #41464A;
-
+    background-color: rgba(39, 46, 51, 0.671);
 }
 #xfwm-tabwin .tabwin-app-grid button {
     min-width: 86px;
     min-height: 86px; 
 }/* Xfwm4's alt-tab dialog, aka "tabwin" */
 
+/*Notifications*/
+ /* #XfceNotifyWindow {
+    background-color: rgba(16, 17, 20,.75);
+    border-radius: 8px;
+} */

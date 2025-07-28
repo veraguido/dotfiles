@@ -10,12 +10,14 @@ LIGHT_ICONS="Flat-Remix-Blue-Light"
 set_dark_theme() {
     xfconf-query -c xsettings -p /Net/ThemeName -s "$DARK_THEME"
     xfconf-query -c xsettings -p /Net/IconThemeName -s "$DARK_ICONS"
+    xfconf-query -c xfce4-panel -p /panels/dark-mode -s true
 }
 
 # Function to set light theme
 set_light_theme() {
     xfconf-query -c xsettings -p /Net/ThemeName -s "$LIGHT_THEME"
     xfconf-query -c xsettings -p /Net/IconThemeName -s "$LIGHT_ICONS"
+    xfconf-query -c xfce4-panel -p /panels/dark-mode -s false
 }
 
 # Check current theme

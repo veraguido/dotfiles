@@ -22,4 +22,3 @@ fi
 
 # Output the number of packages due for upgrade in a simple format
 echo "<txt>$icon_name  $player_title_album</txt><txtclick>playerctl --player=$player_name play-pause</txtclick>"
-echo "<tool> Player: $player_name - Status: $player_status </tool>"

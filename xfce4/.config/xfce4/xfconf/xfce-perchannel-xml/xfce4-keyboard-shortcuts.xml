@@ -44,7 +44,6 @@
     <property name="custom" type="empty">
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-applicationsmenu"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Escape" type="string" value="xkill"/>
       <property name="&lt;Alt&gt;F2" type="string" value="xfce4-appfinder --collapsed">
         <property name="startup-notify" type="bool" value="true"/>
@@ -68,9 +67,12 @@
       <property name="Print" type="string" value="xfce4-screenshooter -r -c "/>
       <property name="&lt;Super&gt;x" type="string" value="thunar"/>
       <property name="&lt;Super&gt;v" type="string" value="xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T"/>
-      <property name="&lt;Super&gt;Return" type="string" value="kitty"/>
-      <property name="&lt;Super&gt;r" type="string" value="/home/guido/.config/rofi/launchers/type-1/launcher.sh"/>
-      <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Right" type="string" value="rofi -show-icons -modi windowcd,window,drun -show window"/>
+      <property name="&lt;Super&gt;m" type="string" value="quodlibet &amp;&amp; spotify"/>
+      <property name="&lt;Super&gt;t" type="string" value="/home/guido/repos/dotfiles/bin/theme-switcher.sh"/>
+      <property name="&lt;Super&gt;BackSpace" type="string" value="/home/guido/repos/xpytile/xpytile.py"/>
+      <property name="&lt;Super&gt;b" type="string" value="firefox"/>
+      <property name="&lt;Super&gt;Return" type="string" value="exo-open --launch TerminalEmulator"/>
+      <property name="&lt;Super&gt;n" type="string" value="xfdesktop --next"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -150,7 +152,6 @@
       <property name="&lt;Shift&gt;&lt;Alt&gt;Page_Down" type="string" value="lower_window_key"/>
       <property name="&lt;Primary&gt;F9" type="string" value="workspace_9_key"/>
       <property name="&lt;Alt&gt;Tab" type="string" value="cycle_windows_key"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;Right" type="string" value="right_workspace_key"/>
       <property name="&lt;Alt&gt;F6" type="string" value="stick_window_key"/>
       <property name="&lt;Primary&gt;F11" type="string" value="workspace_11_key"/>
       <property name="&lt;Alt&gt;Delete" type="string" value="del_workspace_key"/>
@@ -162,10 +163,8 @@
       <property name="&lt;Shift&gt;&lt;Alt&gt;Page_Up" type="string" value="raise_window_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Home" type="string" value="move_window_prev_workspace_key"/>
       <property name="&lt;Alt&gt;&lt;Shift&gt;Tab" type="string" value="cycle_reverse_windows_key"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;Left" type="string" value="left_workspace_key"/>
       <property name="&lt;Alt&gt;F12" type="string" value="above_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Alt&gt;Up" type="string" value="move_window_up_key"/>
-      <property name="&lt;Alt&gt;F8" type="string" value="resize_window_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_7" type="string" value="move_window_workspace_7_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Up" type="string" value="up_workspace_key"/>
       <property name="&lt;Primary&gt;F7" type="string" value="workspace_7_key"/>
@@ -177,7 +176,6 @@
       <property name="&lt;Super&gt;w" type="string" value="close_window_key"/>
       <property name="&lt;Super&gt;f" type="string" value="fullscreen_key"/>
       <property name="&lt;Super&gt;e" type="string" value="maximize_window_key"/>
-      <property name="&lt;Super&gt;q" type="string" value="hide_window_key"/>
       <property name="&lt;Super&gt;1" type="string" value="workspace_1_key"/>
       <property name="&lt;Super&gt;2" type="string" value="workspace_2_key"/>
       <property name="&lt;Super&gt;3" type="string" value="workspace_3_key"/>
@@ -186,17 +184,17 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;quotedbl" type="string" value="move_window_workspace_2_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;sterling" type="string" value="move_window_workspace_3_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;dollar" type="string" value="move_window_workspace_4_key"/>
-      <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
-      <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
-      <property name="&lt;Super&gt;Page_Up" type="string" value="tile_up_right_key"/>
-      <property name="&lt;Super&gt;Insert" type="string" value="tile_up_left_key"/>
-      <property name="&lt;Super&gt;Delete" type="string" value="tile_down_left_key"/>
-      <property name="&lt;Super&gt;Page_Down" type="string" value="tile_down_right_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;percent" type="string" value="move_window_workspace_5_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;asciicircum" type="string" value="move_window_workspace_6_key"/>
       <property name="&lt;Super&gt;5" type="string" value="workspace_5_key"/>
       <property name="&lt;Super&gt;6" type="string" value="workspace_6_key"/>
       <property name="&lt;Alt&gt;grave" type="string" value="switch_window_key"/>
+      <property name="&lt;Super&gt;r" type="string" value="resize_window_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;Left" type="string" value="tile_left_key"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;Right" type="string" value="tile_right_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;Left" type="string" value="left_workspace_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;Right" type="string" value="right_workspace_key"/>
+      <property name="&lt;Super&gt;q" type="string" value="hide_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">

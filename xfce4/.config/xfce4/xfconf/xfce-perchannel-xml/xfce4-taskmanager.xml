@@ -2,8 +2,8 @@
 
 <channel name="xfce4-taskmanager" version="1.0">
   <property name="window-maximized" type="bool" value="false"/>
-  <property name="window-width" type="int" value="722"/>
-  <property name="window-height" type="int" value="610"/>
+  <property name="window-width" type="int" value="1100"/>
+  <property name="window-height" type="int" value="786"/>
   <property name="columns" type="empty">
     <property name="sort-type" type="uint" value="1"/>
     <property name="sort-id" type="uint" value="9"/>

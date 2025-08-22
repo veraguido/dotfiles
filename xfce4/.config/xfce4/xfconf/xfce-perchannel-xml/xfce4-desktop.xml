@@ -10,14 +10,15 @@
     <property name="screen0" type="empty">
       <property name="monitorDisplayPort-2" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/guido/MEGA/wallpapers/pexels-photo-1072179.jpeg"/>
-          <property name="backdrop-cycle-enable" type="bool" value="false"/>
+          <property name="last-image" type="string" value="/home/guido/MEGA/wallpapers/moon-game-forest-sky-wallpaper-98c60d0860e07ca830ac615e6862742a.jpg"/>
+          <property name="backdrop-cycle-enable" type="bool" value="true"/>
           <property name="backdrop-cycle-random-order" type="bool" value="true"/>
           <property name="image-style" type="int" value="5"/>
+          <property name="backdrop-cycle-timer" type="uint" value="20"/>
         </property>
       </property>
       <property name="monitor0" type="empty">
-        <property name="image-path" type="string" value="/home/guido/MEGA/wallpapers/wallhaven-d6y12l.jpg"/>
+        <property name="image-path" type="string" value="/home/guido/MEGA/wallpapers/DSC_5286.jpg"/>
         <property name="image-show" type="bool" value="true"/>
         <property name="image-style" type="int" value="5"/>
       </property>

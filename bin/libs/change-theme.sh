@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define your themes and icons
-DARK_THEME="Fluent-round-Dark-compact"
-LIGHT_THEME="Fluent-round-Light-compact"
+DARK_THEME="Adwaita-dark"
+LIGHT_THEME="Adwaita"
 DARK_ICONS="elementary-xfce"
 LIGHT_ICONS="elementary-xfce"
 #DARK_ICONS="Flat-Remix-Blue-Dark"
@@ -14,7 +14,7 @@ set_dark_theme() {
     xfconf-query -c xsettings -p /Net/IconThemeName -s "$DARK_ICONS"
     xfconf-query -c xfce4-panel -p /panels/dark-mode -s true
     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-    xfconf-query -c xfwm4 -p /general/theme -s onepx  
+    xfconf-query -c xfwm4 -p /general/theme -s onepx-dark
 }
 
 # Function to set light theme
